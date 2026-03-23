@@ -2,7 +2,7 @@ import '../styles/Details.css'
 
 const details = [
   {
-    icon: '📅',
+    icon: '🗓️',
     label: 'Date',
     value: 'Wednesday',
     sub: '1 April 2026',
