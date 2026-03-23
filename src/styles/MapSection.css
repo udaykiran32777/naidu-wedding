@@ -1,0 +1,93 @@
+/* ============================================
+   MAP SECTION
+   ============================================ */
+
+.map-section {
+  background: var(--cream);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.map-heading {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--brown);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.map-address {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+.map-container {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--gold-light);
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+.map-overlay-tag {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-light);
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.map-overlay-tag h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 0.2rem;
+}
+
+.map-overlay-tag p {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.map-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.85rem 2.2rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(160, 120, 64, 0.35);
+}
+
+.map-directions-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(160, 120, 64, 0.45);
+}

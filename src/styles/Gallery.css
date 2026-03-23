@@ -1,0 +1,192 @@
+/* ============================================
+   GALLERY SECTION
+   ============================================ */
+
+.gallery-section {
+  background: linear-gradient(160deg, var(--blush) 0%, var(--cream) 60%);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.gallery-heading {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+.gallery-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-card:first-child {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(90,62,43,0.6) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.gallery-card:hover .gallery-card-overlay {
+  opacity: 1;
+}
+
+.gallery-card-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+  font-style: italic;
+}
+
+.gallery-placeholder {
+  background: linear-gradient(135deg, var(--blush), var(--gold-light));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border: 2px dashed var(--gold-light);
+}
+
+.gallery-placeholder .ph-icon {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.gallery-placeholder .ph-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brown);
+  opacity: 0.6;
+}
+
+/* ============================================
+   FOOTER / CLOSING SECTION
+   ============================================ */
+
+.footer-section {
+  background: var(--brown);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.footer-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 300;
+  color: rgba(201, 169, 110, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.footer-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.footer-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+}
+
+.footer-hearts {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--blush-deep);
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+
+@media (max-width: 600px) {
+  .gallery-card:first-child {
+    grid-column: span 1;
+    aspect-ratio: 4/3;
+  }
+}

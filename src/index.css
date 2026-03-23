@@ -1,0 +1,81 @@
+/* ============================================
+   WEDDING CARD — GLOBAL STYLES
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream:       #fdf8f3;
+  --warm-white:  #fefcf9;
+  --gold:        #c9a96e;
+  --gold-light:  #e8d5b0;
+  --gold-dark:   #a07840;
+  --blush:       #f2e0d8;
+  --blush-deep:  #d4a49a;
+  --charcoal:    #2c2c2c;
+  --brown:       #5a3e2b;
+  --text-muted:  #7a6a5a;
+  --shadow-soft: 0 8px 40px rgba(0,0,0,0.10);
+  --shadow-card: 0 20px 60px rgba(0,0,0,0.12);
+  --transition:  all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold-light); border-radius: 3px; }
+
+/* ---- Divider ---- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: fit-content;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+.divider::after {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+.divider-icon {
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+}
+
+/* ---- Section Label ---- */
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,119 @@
+/* ============================================
+   APP SHELL & NAVBAR
+   ============================================ */
+
+.app {
+  min-height: 100vh;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar-scrolled {
+  background: rgba(253, 248, 243, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(201,169,110,0.2);
+}
+
+.navbar-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.1em;
+  transition: color 0.4s ease;
+}
+
+.navbar-scrolled .navbar-logo {
+  color: var(--brown);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.navbar-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-scrolled .navbar-link {
+  color: var(--text-muted);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after { width: 100%; }
+.navbar-link:hover { color: var(--gold); }
+
+.navbar-scrolled .navbar-link:hover { color: var(--gold-dark); }
+
+.navbar-rsvp {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  text-decoration: none;
+  transition: var(--transition);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-scrolled .navbar-rsvp {
+  border-color: var(--gold);
+  color: var(--gold-dark);
+  background: transparent;
+}
+
+.navbar-rsvp:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(201,169,110,0.3);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+  .navbar-scrolled { padding: 0.9rem 1.5rem; }
+  .navbar-links { display: none; }
+  .navbar-logo { font-size: 1.3rem; }
+}
